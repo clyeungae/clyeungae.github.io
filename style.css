@@ -31,7 +31,7 @@ svg {
 #snowman line {
   stroke: #654D3E;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
   #snowman {
     top: 75%;
   }
