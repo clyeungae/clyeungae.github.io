@@ -113,7 +113,7 @@ header .explore {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  top: calc(100% - 60px);
+  top: calc(100% - 80px);
   opacity: 0;
   color: #FA7C09;
   transition: 0.5s;
