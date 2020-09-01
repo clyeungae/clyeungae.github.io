@@ -16,7 +16,7 @@ svg {
 #snowman {
   width: 300px;
   height: 300px;
-  top: 55%;
+  top: 60%;
   left: calc(100% - 350px);
 }
 #snowman circle {
@@ -33,7 +33,7 @@ svg {
 }
 @media screen and (max-width: 700px) {
   #snowman {
-    top: 70%;
+    top: 75%;
   }
 }
 
