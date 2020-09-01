@@ -1,0 +1,292 @@
+* {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+svg {
+  position: absolute;
+}
+
+#snowman {
+  width: 300px;
+  height: 300px;
+  top: 58%;
+  left: calc(100% - 350px);
+}
+#snowman circle {
+  fill: #fff;
+}
+#snowman circle.eye {
+  fill: #222;
+}
+#snowman polygon.nose {
+  fill: #FA7C09;
+}
+#snowman line {
+  stroke: #654D3E;
+}
+@media screen and (max-width: 700px) {
+  #snowman {
+    top: 70%;
+  }
+}
+
+.snow {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #fff;
+  top: -10px;
+  animation-timing-function: linear;
+  opacity: 1;
+  display: block;
+}
+.snow.snow_fast {
+  animation: snowdrop 3s infinite;
+}
+.snow.snow_slow {
+  animation: snowdrop 5s infinite;
+}
+.snow:nth-child(5n) {
+  animation-delay: -0.2s;
+}
+.snow:nth-child(5n-1) {
+  animation-delay: 1.5s;
+}
+.snow:nth-child(5n-2) {
+  animation-delay: -0.7s;
+}
+.snow:nth-child(5n-3) {
+  animation-delay: -1.2s;
+}
+.snow:nth-child(5n-4) {
+  animation-delay: -1.8s;
+}
+
+@keyframes snowdrop {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+}
+nav.navbar {
+  background-color: #eee;
+  transition: 0.5s;
+}
+nav.navbar a {
+  color: #444;
+  transition: 0.5s;
+  border-bottom: 0px;
+  padding: 0px;
+}
+nav.navbar a:hover {
+  color: #7D6BF2;
+  border-bottom: solid 2px;
+}
+
+nav.navbar.at_top {
+  background-color: transparent;
+}
+
+header {
+  padding: 270px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: #D8E3F2;
+}
+header hr {
+  width: 50px;
+  border: solid 2px #FA7C09;
+}
+header .explore {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 85%;
+  opacity: 0;
+  color: #FA7C09;
+  transition: 0.5s;
+  font-weight: 900;
+}
+header .explore:after {
+  display: block;
+  content: "V";
+}
+header .explore.at_top {
+  opacity: 1;
+}
+header .btn-md {
+  background-color: transparent;
+  border: solid 1px #222;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+header .btn-md:hover {
+  border: solid 2px #7D6BF2;
+  color: #7D6BF2;
+  font-weight: 900;
+}
+header .btn-md i {
+  font-size: 12px;
+}
+
+section, #footer {
+  padding: 50px 0px;
+}
+
+.title {
+  padding-right: 20px;
+  display: inline-block;
+  border: none;
+  border-bottom: solid 1px #444;
+}
+
+.entry {
+  border-radius: 10px;
+  background-color: #f2f3f7;
+  color: #bbb;
+  padding: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.5);
+}
+.entry .cover {
+  position: absolute;
+  color: #7D6BF2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 1;
+  transition: 0.3s;
+}
+.entry .cover h5 {
+  margin: 0px;
+}
+.entry .cover h6 {
+  color: #888;
+  margin: 0px;
+}
+.entry .texts {
+  opacity: 0;
+  transition: 0.7s;
+}
+.entry .texts h6 {
+  padding: 2px 7px;
+  color: #353335;
+}
+.entry .texts p {
+  padding: 0px 5px;
+}
+.entry:hover .cover {
+  opacity: 0;
+}
+.entry:hover .texts {
+  opacity: 1;
+}
+
+section#about .education ul, section#about .experience ul {
+  padding: 5px;
+  list-style: none;
+}
+section#about .education ul li.entry, section#about .experience ul li.entry {
+  position: relative;
+}
+
+section#skills {
+  background-color: #F5F5dc;
+}
+section#skills .skillset {
+  position: relative;
+  list-style: none;
+  padding: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section#skills .skillset .skill {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+section#skills .skillset .skill i, section#skills .skillset .skill p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section#skills .skillset .skill i {
+  font-size: 50px;
+  color: #444;
+  opacity: 1;
+  transition: 0.5s;
+}
+section#skills .skillset .skill p {
+  opacity: 0;
+  transition: 1s;
+}
+section#skills .skillset .skill:hover i {
+  opacity: 0;
+}
+section#skills .skillset .skill:hover p {
+  opacity: 1;
+}
+
+section#projects {
+  background-color: #F5F0B2;
+}
+section#projects .entry {
+  position: relative;
+}
+section#projects .entry p.texts {
+  text-align: center;
+  transform: translateY(25%);
+}
+
+footer#contacts {
+  background-color: #B3B17B;
+  text-align: center;
+  padding: 100px;
+}
+footer#contacts h5 {
+  color: #222;
+  font-size: 50px;
+}
+footer#contacts .contacts {
+  position: relative;
+  list-style: none;
+  padding: 0px;
+  display: inline-block;
+}
+footer#contacts .contacts .contact {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  display: inline-block;
+}
+footer#contacts .contacts .contact i {
+  font-size: 30px;
+  color: #444;
+  opacity: 1;
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer#contacts .contacts .contact:hover i {
+  color: white;
+}

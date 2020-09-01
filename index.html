@@ -1,7 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - personal website</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;900&amp;display=swap'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-expand-md fixed-top at_top"><a class="navbar-brand nav-link" href="#header_index">WILSON</a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav item"><a class="nav-link" href="#about">ABOUT</a></li>
+    <li class="nav item"><a class="nav-link" href="#skills">SKILLS</a></li>
+    <li class="nav item"><a class="nav-link" href="#projects">PROJECTS</a></li>
+    <li class="nav item"><a class="nav-link" href="#contacts">CONTACTS</a></li>
+  </ul>
+</nav>
+<header id="header_index">
+  <div class="container">
+    <svg id="snowman" viewbox="0 0 100 100">
+      <line x1="35" y1="80" x2="25" y2="65"></line>
+      <line x1="29" y1="71" x2="27" y2="65"></line>
+      <line x1="65" y1="80" x2="75" y2="65"></line>
+      <line x1="69" y1="74" x2="72" y2="65"></line>
+      <circle cx="50" cy="85" r="20"></circle>
+      <circle cx="50" cy="65" r="15"></circle>
+      <circle class="eye" cx="45" cy="58" r="2"></circle>
+      <circle class="eye" cx="50" cy="58" r="2"></circle>
+      <polygon class="nose" points="45,63 45,68 30,58"></polygon>
+    </svg>
+    <h1 data-0="transform: translateY(-50px)" data-100="transform: translateY(100px)">Welcome!</h1>
+    <hr/>
+    <h4>I am Wilson :)</h4>
+    <button class="btn-md" onclick=" window.open('https://drive.google.com/file/d/15oPYTq_8w7iekY_2YxscpFsMCd8KJlvl/view?usp=sharing','_blank')">View CV <i class="far fa-external-link-alt"></i></button>
+    <div class="explore at_top">EXPLORE</div>
+    <div class="snow" v-for="snow in snows" :style="{width: snow.radius, height: snow.radius, top: snow.top, left: snow.left}" :class="snow.speed==0? 'snow_fast':'snow_slow'"></div>
+  </div>
+</header>
+<div id="main">
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 education">
+          <h4 class="title">Education</h4>
+          <ul>
+            <li class="entry" v-for="education in educations">
+              <div class="cover">
+                <h5>{{education.level}}</h5>
+                <h6>{{education.period}}</h6>
+              </div>
+              <div class="texts">
+                <h6>{{education.institution}}</h6>
+                <p>{{education.decription}}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-12 experience">
+          <h4 class="title">Experience</h4>
+          <ul>
+            <li class="entry" v-for="experience in experiences">
+              <div class="cover">
+                <h5>{{experience.post}}</h5>
+                <h6>{{experience.period}}</h6>
+              </div>
+              <div class="texts">
+                <h6>{{experience.company}}</h6>
+                <p>{{experience.decription}}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="title">Skills</h4>
+        </div>
+        <ul class="skillset">
+          <li class="skill" v-for="skill in skills"><i :class="[skill =='html'? 'fab fa-html5' : '' ,skill =='css'?'fab fa-css3-alt':'', skill== 'javascript'?'fab fa-js-square':'', skill== 'vue.js'?'fab fa-vuejs':'', skill== 'react.js'?'fab fa-react':'', skill== 'java'?'fab fa-java':'', skill== 'c++'?'fas fa-code':'', skill== 'python'? 'fab fa-python':'']"></i>
+            <p>{{skill}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="title">Projects</h4>
+        </div>
+        <div class="col-sm-12 project">
+          <div class="entry">
+            <div class="cover">
+              <h5>Personal Website</h5>
+            </div>
+            <p class="texts">This website!</p>
+          </div>
+          <div class="entry">   
+            <div class="cover">
+              <h5>PersonalAccounting</h5>
+            </div>
+            <p class="texts">An mobile application providing personalised accounting services. Available in Google Play.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<footer id="contacts">
+  <div class="container">
+    <h5>NOT ENOUGH?</h5>
+    <h6>Reach out and find more!</h6>
+    <p class="far fa-envelope">: clyeung0714@gmail.com</p><br/>
+    <ul class="contacts">
+      <li class="contact" v-for="contact in contacts"><a :href="contact.mediaurl" target="_blank"><i class="fab" :class="[contact.media=='instagram'?'fa-instagram':'',contact.media=='linkedin'?'fa-linkedin':'',contact.media=='medium'?'fa-medium':'',contact.media=='codepen'?'fa-codepen':'']"></i></a></li>
+    </ul>
+  </div>
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js'></script><script  src="./script.js"></script>
+
 </body>
 </html>
