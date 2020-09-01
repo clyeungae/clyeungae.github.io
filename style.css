@@ -16,7 +16,7 @@ svg {
 #snowman {
   width: 300px;
   height: 300px;
-  top: 50%;
+  top: 55%;
   left: calc(100% - 350px);
 }
 #snowman circle {
@@ -99,7 +99,7 @@ nav.navbar.at_top {
 }
 
 header {
-  padding: 300px;
+  padding: 320px;
   margin-bottom: 0px;
   text-align: center;
   background-color: #D8E3F2;
