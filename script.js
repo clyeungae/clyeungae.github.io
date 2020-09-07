@@ -1,9 +1,9 @@
 var s = skrollr.init();
 var contactdata=[
-  {
-    media: "instagram",
-    mediaurl: "https://www.instagram.com/clplayground/"
-  },
+  // {
+  //   media: "instagram",
+  //   mediaurl: "https://www.instagram.com/clplayground/"
+  // },
   {
     media:"linkedin",
     mediaurl: "https://www.linkedin.com/in/chi-lam-yeung-1b48b313b/"
@@ -51,7 +51,7 @@ var experiencedata = [
     decription: "Handling sensitive document and liaising with other department to hold event for the staff"
   }
 ];
-var skilldata =["html","css","javascript","vue.js","react.js", "java","c++","python"];
+var skilldata =["html","css","javascript","vue.js", "java","c++","python"];
 
 var vmfooter = new Vue({
   el: "#contacts",
