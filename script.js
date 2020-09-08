@@ -17,7 +17,7 @@ var contactdata=[
     mediaurl: "https://codepen.io/clyeungae"
   },
   {
-    media: "openProcessing",
+    media: "openprocessing",
     mediaurl: "https://www.openprocessing.org/user/233032#sketches"
   }
 ];
