@@ -120,7 +120,7 @@
     <h6>Reach out and find more!</h6>
     <p class="far fa-envelope">: clyeung0714@gmail.com</p><br/>
     <ul class="contacts">
-      <li class="contact" v-for="contact in contacts"><a :href="contact.mediaurl" target="_blank"><i class="fab" :class="[contact.media=='instagram'?'fa-instagram':'',contact.media=='linkedin'?'fa-linkedin':'',contact.media=='medium'?'fa-medium':'',contact.media=='codepen'?'fa-codepen':'',contact.media=='openprocessing'?'fas fa-drafting-compass':'']"></i></a></li>
+      <li class="contact" v-for="contact in contacts"><a :href="contact.mediaurl" target="_blank"><i :class="[contact.media=='instagram'?'fab fa-instagram':'',contact.media=='linkedin'?'fab fa-linkedin':'',contact.media=='medium'?'fab fa-medium':'',contact.media=='codepen'?'fab fa-codepen':'',contact.media=='openprocessing'?'fas fa-drafting-compass':'']"></i></a></li>
     </ul>
   </div>
 </footer>
