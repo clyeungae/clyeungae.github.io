@@ -60,19 +60,19 @@ svg {
   background-color: #7D6BF2;
 }
 .snow:nth-child(5n-1) {
-  animation-delay: 1.5s;
+  animation-delay: -4.5s;
   background-color: #FA7C09;
 }
 .snow:nth-child(5n-2) {
-  animation-delay: 2s;
+  animation-delay: -2s;
   background-color: aquamarine;
 }
 .snow:nth-child(5n-3) {
-  animation-delay: 1.2s;
+  animation-delay: -1.2s;
   background-color: brown;
 }
 .snow:nth-child(5n-4) {
-  animation-delay: 0.5s;
+  animation-delay: -3.5s;
   background-color: blue;
 }
 
