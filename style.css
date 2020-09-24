@@ -57,23 +57,18 @@ svg {
 }
 .snow:nth-child(5n) {
   animation-delay: -0.1s;
-  background-color: #7D6BF2;
 }
 .snow:nth-child(5n-1) {
-  animation-delay: -4.5s;
-  background-color: #FA7C09;
+  animation-delay: 1.5s;
 }
 .snow:nth-child(5n-2) {
-  animation-delay: -2s;
-  background-color: aquamarine;
+  animation-delay: 2s;
 }
 .snow:nth-child(5n-3) {
   animation-delay: -1.2s;
-  background-color: brown;
 }
 .snow:nth-child(5n-4) {
-  animation-delay: -3.5s;
-  background-color: blue;
+  animation-delay: 0.5s;
 }
 
 @keyframes snowdrop {
