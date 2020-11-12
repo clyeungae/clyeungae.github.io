@@ -46,7 +46,7 @@ var experiencedata = [
     post: "Retail Analyst Intern",
     period: "2018",
     company: "Branded Lifestyle Shanghai Limited",
-    decription: "Assisting software developemnt for internal business usage. "
+    decription: "Assisting software development for internal business usage. "
   },
   {
     post: "HR Intern",
